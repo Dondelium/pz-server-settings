@@ -254,7 +254,7 @@ SandboxVars = {
     -- 2 = Every Day
     -- 3 = Every Week
     -- 4 = Every Month
-    LootRespawn = 0,
+    LootRespawn = 1,
     -- When > 0, loot will not respawn in zones that have been visited within this number of in-game hours. Minimum=0 Maximum=2147483647 Default=0
     SeenHoursPreventLootRespawn = 0,
     -- A comma-separated list of item types that will be removed after HoursForWorldItemRemoval hours.
@@ -313,9 +313,9 @@ SandboxVars = {
     -- 2 = Rare
     -- 3 = Sometimes
     -- 4 = Often
-    GeneratorSpawning = 2,
+    GeneratorSpawning = 1,
     -- How much fuel is consumed per in-game hour. Minimum=0.00 Maximum=100.00 Default=1.00
-    GeneratorFuelConsumption = 1.0,
+    GeneratorFuelConsumption = 0.8,
     -- Increase/decrease probability of discovering randomized safe houses on the map: either burnt out, containing loot stashes, dead survivor bodies etc. Default=Rare
     -- 1 = Never
     -- 2 = Extremely Rare
@@ -422,7 +422,7 @@ SandboxVars = {
     -- Governs the chances of finding vehicles with gas in the tank. Default=Low
     -- 1 = Low
     -- 2 = Normal
-    ChanceHasGas = 1,
+    ChanceHasGas = 2,
     -- Governs how full gas tanks will be in discovered cars. Default=Low
     -- 1 = Very Low
     -- 2 = Low
@@ -441,7 +441,7 @@ SandboxVars = {
     -- 8 = Full
     FuelStationGas = 6,
     -- How gas-hungry vehicles on the map are. Minimum=0.00 Maximum=100.00 Default=1.00
-    CarGasConsumption = 1.0,
+    CarGasConsumption = 0.8,
     -- Default=Rare
     -- 1 = Never
     -- 2 = Extremely Rare
@@ -460,7 +460,7 @@ SandboxVars = {
     -- 2 = Low
     -- 3 = Normal
     -- 4 = High
-    CarDamageOnImpact = 3,
+    CarDamageOnImpact = 2,
     -- Damage received by the player from the car in a collision. Default=None
     -- 1 = None
     -- 2 = Low
@@ -606,7 +606,7 @@ SandboxVars = {
     -- Multiplied by moodle level (0-4). Minimum=-1.00 Maximum=1.00 Default=0.01
     lgd_antibodies_150_moodles_drunk = 0.0,
     -- Multiplied by moodle level (0-4). Minimum=-1.00 Maximum=1.00 Default=0.05
-    lgd_antibodies_150_moodles_foodEaten = 0.05,
+    lgd_antibodies_150_moodles_foodEaten = 0.1,
     -- Constant trait bonus. Minimum=-1.00 Maximum=1.00 Default=-0.01
     lgd_antibodies_150_traits_asthmatic = -0.01,
     -- Constant trait bonus. Minimum=-1.00 Maximum=1.00 Default=-0.01
@@ -742,7 +742,7 @@ SandboxVars = {
         -- Default=Some zombies in the world will pretend to be dead
         -- 1 = Some zombies in the world will pretend to be dead
         -- 2 = Some zombies in the world, as well as some you 'kill', can pretend to be dead
-        DisableFakeDead = 3,
+        DisableFakeDead = 1,
     },
     ZombieConfig = {
         -- Set by the "Zombie Count" population option. 4.0 = Insane, Very High = 3.0, 2.0 = High, 1.0 = Normal, 0.35 = Low, 0.0 = None. Minimum=0.00 Maximum=4.00 Default=1.00
@@ -776,9 +776,9 @@ SandboxVars = {
         -- The amount of experienced recovered from reading bound journals. Minimum=1 Maximum=100 Default=100
         RecoveryPercentage = 85,
         -- A multiplier on the speed of transcribing journals. Minimum=0.00 Maximum=1000.00 Default=1.00
-        TranscribeSpeed = 1.0,
+        TranscribeSpeed = 2.0,
         -- A multiplier on the speed of reading bound journals. Minimum=0.00 Maximum=1000.00 Default=1.00
-        ReadTimeSpeed = 1.0,
+        ReadTimeSpeed = 2.0,
         -- Starting with more than 1 point in a skill generally nets you bonus XP - with this toggled off that XP is not recorded. All XP recorded is that of a character with no starting skills. This does NOT recover starting levels - only the bonus XP earned.
         RecoverProfessionAndTraitsBonuses = false,
         -- Toggling this on will allow people to transcribe XP earned from watching TV/VHS. Note: This means players can carry over watched XP between characters cumulatively.
@@ -876,7 +876,7 @@ SandboxVars = {
     },
     DGScentOfBlood = {
         -- The maximum range Zombies can detect blood. Minimum=1 Maximum=10 Default=3
-        BloodRange = 5,
+        BloodRange = 6,
         -- Should Zombies detect dirty blood-soaked bandages?
         BloodyBandage = true,
         -- Should Zombies only detect blood from Deep Wounds?
@@ -928,7 +928,7 @@ SandboxVars = {
         ColdIllnessSystemColdsWeathered = 100,
         FearOfLocationsSystem = true,
         -- Counter = amount of minutes you need to spend outside/inside to lose respective trait, Agoraphobic or Claustrophobic. Being outside/inside when stressed or unhappy will decrease counter. Reaching -counter value will GAIN you appropriate trait. Reaching +counter value will get rid of appropriate trait, being in between -counter and +counter will get you nothing. Lower boundary is -2x of counter, upper boundary is 2x of set value here. Minimum=0 Maximum=500000 Default=12000
-        FearOfLocationsSystemCounter = 12000,
+        FearOfLocationsSystemCounter = 10000,
         -- How fast you decrease counter when you either unhappy (50%+) or stressed (50%+). Considering you're more often normal than unhappy or stressed, I'd recommend not setting this too low. Formula for how much counter decreases every minute is 1 * (1 + unhappiness(0-1)) + (1 * stress(0-1)) * multiplier, so at minimum you lose 0 * multiplier, at maximum you lose 4 * multiplier. Minimum=0.00 Maximum=100.00 Default=1.00
         FearOfLocationsSystemCounterLoseMultiplier = 1.0,
         FogSystem = true,
@@ -959,7 +959,7 @@ SandboxVars = {
         -- Dexterous: 60% of Weight counter and 100% of Items counter.
         -- Butterfingers (More Traits): 150% of Weight counter and 150% of Items counter. Minimum=0 Maximum=2500000 Default=50000
         InventoryTransferSystemWeight = 50000,
-        LuckSystem = true,
+        LuckSystem = false,
         -- Code will count ALL your skill levels (including any added by mods and passives), and check if you have % of skill levels required to lose/gain Unlucky/Lucky. You lose Unlucky when you reach half of % you set. Meaning on default settings, you'll lose Unlucky when sum of your skill levels is 33% or higher (from max) and you'll get lucky when you hit 66%. Minimum=0.00 Maximum=100.00 Default=66.00
         LuckSystemSkill = 66.0,
         RainSystem = true,
@@ -972,7 +972,7 @@ SandboxVars = {
         -- Mod tracks at which hours you like to sleep, and as long as you sleep within around those hours, you reinforce your healthy sleep schedule. If you sleep outside of it, you lose some schedule integrity. Not sleeping for more than 24h also starts to damage your sleep schedule. Mod tracks at which hours you like to sleep by averaging decent amount of last sleep actions you taken, so it's possible to shift your schedule to different hours. Very easy at the start, and harder as you play since it's going to be more data so singular sleep action is not going to weight a lot. So if you want to keep your sleep schedule healthy, change it gradually.
         -- ---Technical description, don't read this if you don't want to meta-game much---
         -- Every time you sleep, mod tracks midpoint of your sleep, aka if u sleep between 23:00 and 05:30, midpoint would be 03:45, then it's added to table with last 100 same results. When table is full, the oldest value is removed from it. The average of this table is your optimal sleeping hour. If you sleep within +-6h you get progress to your SleepHealthiness bar. Goes from -200 to 200. Check is made every 10 min, you get + 0.167 to said bar, so essentially 1h of sleeping in correct schedule gives +1 to bar. Sleeping outside of it removes 0.167 from bar every 10 min. After not sleeping for more than 24h you start getting -0.167 every ten minutes. If your bar below -100, you get Sleepyhead. If it's above 100, you get Wakeful. Starting with either trait will set starting value of the bar to max/min point, so for Wakeful +200 and for Sleepyhead -200.
-        SleepSystem = true,
+        SleepSystem = false,
         -- How fast you increase/decrease SleepHealthiness counter, which dictates if you get/lose Wakeful and Sleepyhead. Higher values = faster gain but also faster lose. Same goes other way, lower multiplier = slower gain but also harder to lose them. Minimum=0.00 Maximum=100.00 Default=1.00
         SleepSystemMultiplier = 1.0,
         -- Describing conditions on which you lose/gain traits in here would take a lot of text, so just check goolge sheets for details (link in mod workshop page description). Affected traits that can be gained/lost dynamically: High/Low Thirst, Light Eater/Hearty Appetite, Thick/Thin Skinned, Slow/Fast Healer.
@@ -981,7 +981,7 @@ SandboxVars = {
         -- How many levels in Strength + Fitness you need to have to gain Thick Skinned and Fast Healer (this is not only condition, once again check google sheets) Minimum=0 Maximum=20 Default=16
         WeightSystemSkill = 16,
         -- If this option is disabled, moodle won't show up. For single-player leave this on and change moodles you see with Mod Options. If it's a server setting, players won't be able to enable moodle client-sided.
-        BloodlustMoodle = true,
+        BloodlustMoodle = false,
         -- For how many hours bloodlust moodle is visible after a nearby kill on zombie Minimum=1 Maximum=480 Default=6
         BloodlustMoodleVisibilityHours = 6,
         -- If this option is disabled, moodle won't show up. For single-player leave this on and change moodles you see with Mod Options. If it's a server setting, players won't be able to enable moodle client-sided.
@@ -1082,8 +1082,8 @@ SandboxVars = {
         ConspicuousSkill = 4,
         Cook = true,
         -- Minimum=0 Maximum=10 Default=8
-        CookSkill = 8,
-        FastLearner = true,
+        CookSkill = 6,
+        FastLearner = false,
         -- Maintenance + Carpentry + Cooking + Farming + First Aid + Electrical + Metalworking + Mechanics + Tailoring Minimum=0 Maximum=90 Default=60
         FastLearnerSkill = 60,
         FirstAid = true,
@@ -1151,7 +1151,7 @@ SandboxVars = {
         Sewer = true,
         -- Minimum=0 Maximum=10 Default=4
         SewerSkill = 4,
-        SlowLearner = true,
+        SlowLearner = false,
         -- Maintenance + Carpentry + Cooking + Farming + First Aid + Electrical + Metalworking + Mechanics + Tailoring Minimum=0 Maximum=90 Default=30
         SlowLearnerSkill = 30,
         Sojutsu = true,
@@ -1253,9 +1253,9 @@ SandboxVars = {
         -- The maximal amount of zombies could spawn in a HordeNight. Warnning: too much spawn will cause performance issues. Minimum=0 Maximum=7200 Default=800
         HordeNightZombieCountMax = 3200,
         -- The random chance to start a HordeNight, outside of the regular frequency. It will only happen after the first HordeNight. 0.0 means no random HordeNight, 1.0 means HordeNight everyday. Minimum=0.00 Maximum=1.00 Default=0.00
-        RandomHordeNightChance = 0.1,
+        RandomHordeNightChance = 0.15,
         -- The maximal distance for a HordeNight zombie to spawn around players.  Turn down the value if you don't see zombies spawn in the HordeNight. Minimum=10 Maximum=90 Default=75
-        HordeNightZombieSpawnDistance = 75,
+        HordeNightZombieSpawnDistance = 70,
         -- When it's on, there will be an icon on the top right if it's currently the HordeNight day.This will not indicates the random HordeNight.
         HordeNightIndicator = true,
     },
@@ -1364,6 +1364,25 @@ SandboxVars = {
         -- This is a compatibility option for mods that grant XP for reading skill books that causes all XP gained while reading a skill book to not be considered "missed" and not add to returnable XP. Note that this necessarily includes all sources of XP, including TV shows.
         MuteWhileReading = false,
     },
+    SaveOurStationCore = {
+        -- Does the Knox Power-Grid need to fail before broadcast faults/interruptions start occuring?
+        RequirePowerShutoff = true,
+        -- Broadcast interruptions may occur at random, and will cause systems like Weather Forecasts and the Air Traffic Radar to temporarily stop working. Interruptions will resolve themselves after some time.
+        EnableInterruptions = false,
+        -- Broadcast faults may occur at random and, if not repaired by a player, will eventually cause a permanent failure of the broadcast system. Once a fault is identified, the broadcast system will provide a diagnostic code and the location of the affected system. Further information can be obtained through NWS Diagnostics Manuals and Registers.
+        EnableFaults = true,
+        -- The Reliability Profile determines the probability/chance of a Fault or Interruption occuring. Default=Normal  |  Rare Faults, Frequent Interruptions
+        -- 1 = Well-Maintained  |  Rare Faults, Rare Interruptions
+        -- 2 = Reliable  |  Rare Faults, Occasional Interruptions
+        -- 3 = Normal  |  Rare Faults, Frequent Interruptions
+        -- 4 = Unreliable  |  Occasional Faults, Frequent Interruptions
+        ReliabilityProfile = 3,
+        -- This multiplier affects how long Fault/Interruption cycles last, how much time there is to repair a Fault, and how long the 'grace period' between each cycle is. Default=24x  |  Normal (Recommended for Singleplayer)
+        -- 1 = 12x  |  Very Short (Recommended for Large Servers)
+        -- 2 = 18x  |  Short
+        -- 3 = 24x  |  Normal (Recommended for Singleplayer)
+        TimeDurationMultiplier = 3,
+    },
     SOTO = {
         TraitsProgress = true,
         -- Should be lower than Max. 1 day = 24 Minimum=1 Maximum=100000 Default=168
@@ -1417,9 +1436,9 @@ SandboxVars = {
         -- Minimum=1 Maximum=1000000 Default=500
         SpawnChance = 500,
         -- Minimum=0 Maximum=100 Default=100
-        LootChance = 100,
+        LootChance = 40,
         -- Minimum=0 Maximum=100 Default=0
-        LootChanceZomboxycycline = 100,
+        LootChanceZomboxycycline = 25,
     },
     VehicleRepairOverhaul = {
         DisableVehicleSalvage = false,
@@ -1432,11 +1451,11 @@ SandboxVars = {
         -- 0 = never, 100 = always (can be buggy) Minimum=0 Maximum=100 Default=10
         collisionTripChanceShamblers = 10,
         -- 0 = never, 100 = always (can be buggy) Minimum=0 Maximum=100 Default=25
-        randomTripChanceSprinters = 25,
+        randomTripChanceSprinters = 35,
         -- 0 = never, 100 = always (can be buggy) Minimum=0 Maximum=100 Default=10
-        randomTripChanceFastShamblers = 10,
+        randomTripChanceFastShamblers = 20,
         -- 0 = never, 100 = always (can be buggy) Minimum=0 Maximum=100 Default=5
-        randomTripChanceShamblers = 5,
+        randomTripChanceShamblers = 10,
         -- If true, when zombies trip, they will be in a knocked down state for 1 or 2 seconds before they attempt to get up again
         knockDownOnTrip = false,
     },
