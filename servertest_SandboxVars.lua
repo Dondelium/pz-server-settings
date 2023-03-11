@@ -1249,11 +1249,11 @@ SandboxVars = {
         -- How many zombies would spawn at the first HordeNight. Warnning: too much spawn will cause performance issues. Minimum=1 Maximum=7200 Default=100
         FirstHordeNightZombiesCount = 25,
         -- How many more zombies would spawn in the next HordeNight after you survived one. Warnning: too much spawn will cause performance issues. Minimum=0 Maximum=1000 Default=50
-        HordeNightZombieIncrement = 25,
+        HordeNightZombieIncrement = 10,
         -- The maximal amount of zombies could spawn in a HordeNight. Warnning: too much spawn will cause performance issues. Minimum=0 Maximum=7200 Default=800
         HordeNightZombieCountMax = 3200,
         -- The random chance to start a HordeNight, outside of the regular frequency. It will only happen after the first HordeNight. 0.0 means no random HordeNight, 1.0 means HordeNight everyday. Minimum=0.00 Maximum=1.00 Default=0.00
-        RandomHordeNightChance = 0.15,
+        RandomHordeNightChance = 0.05,
         -- The maximal distance for a HordeNight zombie to spawn around players.  Turn down the value if you don't see zombies spawn in the HordeNight. Minimum=10 Maximum=90 Default=75
         HordeNightZombieSpawnDistance = 70,
         -- When it's on, there will be an icon on the top right if it's currently the HordeNight day.This will not indicates the random HordeNight.
