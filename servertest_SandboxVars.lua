@@ -61,7 +61,7 @@ SandboxVars = {
     -- 6 = 9 PM
     -- 7 = 12 AM
     -- 8 = 2 AM
-    StartTime = 2,
+    StartTime = 9,
     -- Default=0-30 Days
     -- 1 = Instant
     -- 2 = 0-30 Days
@@ -70,7 +70,7 @@ SandboxVars = {
     -- 5 = 0-1 Year
     -- 6 = 0-5 Years
     -- 7 = 2-6 Months
-    WaterShut = 2,
+    WaterShut = 7,
     -- Default=0-30 Days
     -- 1 = Instant
     -- 2 = 0-30 Days
@@ -79,7 +79,7 @@ SandboxVars = {
     -- 5 = 0-1 Year
     -- 6 = 0-5 Years
     -- 7 = 2-6 Months
-    ElecShut = 2,
+    ElecShut = 7,
     -- Minimum=-1 Maximum=2147483647 Default=14
     WaterShutModifier = 45,
     -- Minimum=-1 Maximum=2147483647 Default=14
@@ -99,7 +99,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    CannedFoodLoot = 3,
+    CannedFoodLoot = 4,
     -- Default=Rare
     -- 1 = None (not recommended)
     -- 2 = Insanely Rare
@@ -107,7 +107,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    LiteratureLoot = 3,
+    LiteratureLoot = 4,
     -- Seeds, Nails, Saws, Fishing Rods, various tools, etc... Default=Rare
     -- 1 = None (not recommended)
     -- 2 = Insanely Rare
@@ -123,7 +123,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    MedicalLoot = 3,
+    MedicalLoot = 4,
     -- Default=Rare
     -- 1 = None (not recommended)
     -- 2 = Insanely Rare
@@ -147,7 +147,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    AmmoLoot = 3,
+    AmmoLoot = 4,
     -- Default=Rare
     -- 1 = None (not recommended)
     -- 2 = Insanely Rare
@@ -163,7 +163,7 @@ SandboxVars = {
     -- 4 = Rare
     -- 5 = Normal
     -- 6 = Common
-    OtherLoot = 3,
+    OtherLoot = 4,
     -- Controls the global temperature. Default=Normal
     -- 1 = Very Cold
     -- 2 = Cold
@@ -254,13 +254,13 @@ SandboxVars = {
     -- 2 = Every Day
     -- 3 = Every Week
     -- 4 = Every Month
-    LootRespawn = 1,
+    LootRespawn = 0,
     -- When > 0, loot will not respawn in zones that have been visited within this number of in-game hours. Minimum=0 Maximum=2147483647 Default=0
     SeenHoursPreventLootRespawn = 0,
     -- A comma-separated list of item types that will be removed after HoursForWorldItemRemoval hours.
     WorldItemRemovalList = "Base.Hat,Base.Glasses,Base.Maggots",
     -- Number of hours since an item was dropped on the ground before it is removed.  Items are removed the next time that part of the map is loaded.  Zero means items are not removed. Minimum=0.00 Maximum=2147483647.00 Default=24.00
-    HoursForWorldItemRemoval = 72.0,
+    HoursForWorldItemRemoval = 48.0,
     -- If true, any items *not* in WorldItemRemovalList will be removed.
     ItemRemovalListBlacklistToggle = false,
     -- This will affect starting world erosion and food spoilage. Default=0
@@ -670,17 +670,17 @@ SandboxVars = {
         -- 1 = Superhuman
         -- 2 = Normal
         -- 3 = Weak
-        Strength = 4,
+        Strength = 2,
         -- Controls the difficulty to kill zombies. Default=Normal
         -- 1 = Tough
         -- 2 = Normal
         -- 3 = Fragile
-        Toughness = 4,
+        Toughness = 2,
         -- Controls how the zombie virus spreads. Default=Blood + Saliva
         -- 1 = Blood + Saliva
         -- 2 = Saliva Only
         -- 3 = Everyone's Infected
-        Transmission = 1,
+        Transmission = 2,
         -- Controls how quickly the infection takes effect. Default=2-3 Days
         -- 1 = Instant
         -- 2 = 0-30 Seconds
@@ -714,17 +714,17 @@ SandboxVars = {
         -- 2 = Normal
         -- 3 = Short
         -- 4 = None
-        Memory = 5,
+        Memory = 2,
         -- Controls zombie vision radius. Default=Normal
         -- 1 = Eagle
         -- 2 = Normal
         -- 3 = Poor
-        Sight = 4,
+        Sight = 2,
         -- Controls zombie hearing radius. Default=Normal
         -- 1 = Pinpoint
         -- 2 = Normal
         -- 3 = Poor
-        Hearing = 4,
+        Hearing = 2,
         -- Zombies that have not seen/heard player can attack doors and constructions while roaming.
         ThumpNoChasing = true,
         -- Governs whether or not zombies can destroy player constructions and defences.
@@ -746,7 +746,7 @@ SandboxVars = {
     },
     ZombieConfig = {
         -- Set by the "Zombie Count" population option. 4.0 = Insane, Very High = 3.0, 2.0 = High, 1.0 = Normal, 0.35 = Low, 0.0 = None. Minimum=0.00 Maximum=4.00 Default=1.00
-        PopulationMultiplier = 1.5,
+        PopulationMultiplier = 1.3,
         -- Adjusts the desired population at the start of the game. Minimum=0.00 Maximum=4.00 Default=1.00
         PopulationStartMultiplier = 1.0,
         -- Adjusts the desired population on the peak day. Minimum=0.00 Maximum=4.00 Default=1.50
@@ -770,7 +770,7 @@ SandboxVars = {
         -- The distance between zombie groups. Minimum=5 Maximum=25 Default=15
         RallyGroupSeparation = 10,
         -- How close members of a group stay to the group's leader. Minimum=1 Maximum=10 Default=3
-        RallyGroupRadius = 5,
+        RallyGroupRadius = 6,
     },
     SkillRecoveryJournal = {
         -- The amount of experienced recovered from reading bound journals. Minimum=1 Maximum=100 Default=100
@@ -1241,7 +1241,7 @@ SandboxVars = {
     },
     HordeNightMain = {
         -- At which hour would the HordeNight start. Minimum=0 Maximum=23 Default=22
-        HordeNightHour = 20,
+        HordeNightHour = 22,
         -- At which day would the first HordeNight start. 0 means the spawn day, 1 means the day after the spawn day. Minimum=0 Maximum=365 Default=10
         FirstHordeNightDay = 7,
         -- How many days would a HordeNight start after one another. 1 means HordeNight every day. Minimum=1 Maximum=365 Default=5
